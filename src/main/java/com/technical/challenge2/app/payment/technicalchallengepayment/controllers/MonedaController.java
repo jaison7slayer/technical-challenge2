@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.technical.challenge2.app.payment.technicalchallengepayment.core.entity.Moneda;
 import com.technical.challenge2.app.payment.technicalchallengepayment.core.service.MonedaService;
 
-
 @RestController
 public class MonedaController {
 	

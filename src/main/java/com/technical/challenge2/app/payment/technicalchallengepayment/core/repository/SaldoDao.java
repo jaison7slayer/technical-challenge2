@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import com.technical.challenge2.app.payment.technicalchallengepayment.core.entity.Pago;
 import com.technical.challenge2.app.payment.technicalchallengepayment.core.entity.Saldo;
 
 import jakarta.transaction.Transactional;
@@ -20,5 +21,9 @@ public interface SaldoDao extends JpaRepository<Saldo, String>{
 	void updateSaldo(@Param(value = "idCliente") String idCliente,
 					@Param(value = "monedaPago") String monedaPago,
 					@Param(value = "montoPago") Double montoPago);
+	
+	Saldo findByIdCliente(String idCliente);
+	
+	
 
 }
